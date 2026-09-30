@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Outline｜Stillness by Slowly</title>
+
+  <link rel="stylesheet" href="./outline.css">
+</head>
+<body>
+  <main class="outline-page">
+
+    <header class="page-heading">
+      <h1>標題</h1>
+    </header>
+
+    <div class="outline-tabs-shell" id="outlineTabs" data-slowly-tabs>
+      <nav class="view-tabs" role="tablist" aria-label="頁面分頁">
+        <button type="button" role="tab"
+                data-view-target="page1"
+                aria-selected="true">分頁</button>
+        <button type="button" role="tab"
+                data-view-target="page2"
+                aria-selected="false">分頁</button>
+        <button type="button" role="tab"
+                data-view-target="page3"
+                aria-selected="false">分頁</button>
+      </nav>
+
+      <section class="view-panel" data-view-panel="page1">
+        <p class="outline-demo">第一分頁</p>
+      </section>
+
+      <section class="view-panel" data-view-panel="page2" hidden>
+        <p class="outline-demo">第二分頁</p>
+      </section>
+
+      <section class="view-panel" data-view-panel="page3" hidden>
+        <p class="outline-demo">第三分頁</p>
+      </section>
+    </div>
+
+    <footer class="sbs-signature" aria-label="Stillness by Slowly">
+      <span class="sbs-signature-mark">慢 慢</span>
+      <span class="sbs-signature-separator" aria-hidden="true">|</span>
+      <span class="sbs-signature-name">Stillness by Slowly</span>
+    </footer>
+
+  </main>
+
+  <script src="https://lib.stillnessbyslowly.com/ui/tabs/tabs.js"></script>
+  <script src="./outline.js"></script>
+</body>
+</html>

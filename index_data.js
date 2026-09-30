@@ -7,20 +7,16 @@ window.SbsFrameworkIndex = [
     id: "framework",
     title: "Framework",
     desc: "完整 Framework 收錄。",
-    items: []
-
-    /* 範例：
     items: [
       {
-        title: "SBS Framework 01",
-        desc: "右上管理、Tab 切頁、固定線條與頁尾識別。",
-        keywords: ["管理", "tabs", "線條", "logo"],
-        path: "./framework_01/",
+        title: "outline",
+        desc: "標題、細線、Tab 分頁、細線、宿主內容、底部 SBS Logo 的基礎頁面骨架。",
+        keywords: ["outline", "頁面骨架", "tabs", "分頁", "細線", "logo"],
+        path: "./outline/",
         links: [
-          { label: "查看", href: "./framework_01/" }
+          { label: "查看", href: "./outline/" }
         ]
       }
     ]
-    */
   }
 ];

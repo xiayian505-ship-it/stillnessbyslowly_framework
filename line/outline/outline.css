@@ -1,0 +1,95 @@
+/* =========================================================
+   SBS Framework｜outline
+
+   共通骨架：
+   標題
+   細線
+   Tab 分頁
+   細線
+   宿主內容
+   底部 SBS Logo
+
+   只保留骨架成立需要的排版。
+   顏色、字體、字級、背景、圓角、陰影與 Tab 選中外觀由宿主決定。
+========================================================= */
+
+[hidden] {
+  display: none !important;
+}
+
+.outline-page {
+  width: min(calc(100% - 32px), var(--outline-max-width, 860px));
+  min-height: 100vh;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 標題下方第一條細線。 */
+.page-heading {
+  padding: var(--outline-title-top, 26px) 0 var(--outline-title-bottom, 18px);
+  border-bottom: 1px solid var(--outline-line, currentColor);
+}
+
+.page-heading h1 {
+  margin: 0;
+}
+
+/* Tabs 下方第二條細線。 */
+.outline-tabs-shell {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.view-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--outline-tab-gap, 24px);
+  margin-top: var(--outline-tabs-top, 24px);
+  border-bottom: 1px solid var(--outline-line, currentColor);
+}
+
+.view-tabs [data-view-target] {
+  flex: 0 0 auto;
+  appearance: none;
+  margin: 0;
+  padding: 0 0 var(--outline-tab-bottom, 10px);
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* 內容只保留可放宿主內容的空間。 */
+.view-panel {
+  min-width: 0;
+  padding: var(--outline-content-top, 24px) 0 var(--outline-content-bottom, 32px);
+}
+
+/* 底部 SBS Logo：只決定排列，不決定視覺。 */
+.sbs-signature {
+  margin-top: auto;
+  padding: var(--outline-logo-top, 20px) 0 var(--outline-logo-bottom, 8px);
+  border-top: 1px solid var(--outline-line, currentColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--outline-logo-gap, 9px);
+}
+
+@media (max-width: 600px) {
+  .outline-page {
+    width: min(calc(100% - 24px), var(--outline-max-width, 860px));
+  }
+
+  .view-tabs {
+    gap: var(--outline-tab-gap-mobile, 14px);
+  }
+}
+
+
+/* Demo only：讓 Framework 預覽時看得出分頁正在切換。 */
+.outline-demo {
+  margin: 0;
+}
