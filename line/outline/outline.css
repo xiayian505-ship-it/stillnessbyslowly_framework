@@ -27,12 +27,21 @@
 
 /* 標題下方第一條細線。 */
 .page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   padding: var(--outline-title-top, 26px) 0 var(--outline-title-bottom, 18px);
   border-bottom: 1px solid var(--outline-line, currentColor);
 }
 
 .page-heading h1 {
   margin: 0;
+}
+
+.home-link {
+  flex: 0 0 auto;
+  color: inherit;
 }
 
 /* Tabs 下方第二條細線。 */
@@ -78,6 +87,11 @@
   gap: var(--outline-logo-gap, 9px);
 }
 
+/* Demo only：讓 Framework 預覽時看得出分頁正在切換。 */
+.outline-demo {
+  margin: 0;
+}
+
 @media (max-width: 600px) {
   .outline-page {
     width: min(calc(100% - 24px), var(--outline-max-width, 860px));
@@ -86,10 +100,4 @@
   .view-tabs {
     gap: var(--outline-tab-gap-mobile, 14px);
   }
-}
-
-
-/* Demo only：讓 Framework 預覽時看得出分頁正在切換。 */
-.outline-demo {
-  margin: 0;
 }

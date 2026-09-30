@@ -31,6 +31,8 @@ h2{margin:0 0 14px;font-size:1rem;color:var(--muted)}
 .search-result:hover,.search-result:focus-visible,.framework-item.search-target{border-color:var(--accent)}
 .item-title,.search-title{font-weight:700}
 .item-desc,.item-path{margin-top:5px;font-size:.92rem;line-height:1.6}
+.item-copy{margin-top:5px;padding:0;border:0;background:none;color:var(--accent);font:inherit;font-size:.92rem;line-height:1.6;text-align:left;cursor:pointer}
+.item-copy:hover,.item-copy:focus-visible{text-decoration:underline}
 .item-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
 .item-links a{color:var(--accent);text-decoration:none}.item-links a:hover{text-decoration:underline}
 .empty{padding:12px 0;line-height:1.7}

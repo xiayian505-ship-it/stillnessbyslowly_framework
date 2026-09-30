@@ -12,6 +12,28 @@
     return String(value ?? "").toLocaleLowerCase();
   }
 
+  async function copyAbsolutePath(value, button) {
+    const original = button.textContent;
+
+    try {
+      if (!window.SlowlyClipboardCopy?.copy) {
+        throw new Error("ClipboardCopy 尚未載入。");
+      }
+
+      button.disabled = true;
+      await window.SlowlyClipboardCopy.copy(value);
+      button.textContent = "已複製";
+    } catch (error) {
+      console.error("[Framework] 複製絕對路徑失敗：", error);
+      button.textContent = "複製失敗";
+    } finally {
+      window.setTimeout(() => {
+        button.textContent = original;
+        button.disabled = false;
+      }, 1400);
+    }
+  }
+
   function createItem(item, groupId, index) {
     const card = document.createElement("article");
     card.className = "framework-item";
@@ -30,7 +52,15 @@
       card.appendChild(desc);
     }
 
-    if (item.path) {
+    if (item.copyPath) {
+      const copy = document.createElement("button");
+      copy.type = "button";
+      copy.className = "item-copy";
+      copy.textContent = "複製絕對路徑";
+      copy.setAttribute("aria-label", `複製 ${item.title || "Framework"} 的絕對路徑`);
+      copy.addEventListener("click", () => copyAbsolutePath(item.copyPath, copy));
+      card.appendChild(copy);
+    } else if (item.path) {
       const path = document.createElement("div");
       path.className = "item-path";
       path.textContent = item.path;
@@ -110,6 +140,7 @@
         group.desc,
         item.title,
         item.desc,
+        item.copyPath,
         item.path,
         ...(item.keywords || []),
         ...(item.links || []).flatMap((link) => [link.label, link.href])

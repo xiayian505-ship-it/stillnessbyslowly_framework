@@ -4,17 +4,20 @@
 */
 window.SbsFrameworkIndex = [
   {
-    id: "framework",
-    title: "Framework",
-    desc: "完整 Framework 收錄。",
+    id: "line",
+    title: "line",
+    desc: "線性頁面骨架。",
     items: [
       {
         title: "outline",
         desc: "標題、細線、Tab 分頁、細線、宿主內容、底部 SBS Logo 的基礎頁面骨架。",
-        keywords: ["outline", "頁面骨架", "tabs", "分頁", "細線", "logo"],
-        path: "./outline/",
+        keywords: ["line", "outline", "頁面骨架", "tabs", "分頁", "細線", "logo"],
+        copyPath: "https://framework.stillnessbyslowly.com/line/outline/",
         links: [
-          { label: "查看", href: "./outline/" }
+          {
+            label: "查看",
+            href: "https://framework.stillnessbyslowly.com/line/outline/"
+          }
         ]
       }
     ]
