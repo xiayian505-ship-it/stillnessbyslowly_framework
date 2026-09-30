@@ -1,0 +1,38 @@
+:root{
+  --bg:#f6f6f4;
+  --surface:#fff;
+  --text:#202426;
+  --muted:#70777a;
+  --line:#d9dddf;
+  --accent:#536d78;
+  --content:760px;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,"Microsoft JhengHei",sans-serif}
+button,input{font:inherit}
+.page-shell{width:min(calc(100% - 32px),var(--content));margin:0 auto;padding:64px 0 32px}
+.page-head{margin-bottom:28px}
+h1{margin:0 0 8px;font-size:2rem}
+.page-head p,.status,.empty,.item-desc,.item-path{color:var(--muted)}
+.page-head p,.status,.empty{margin:0}
+.group-tabs{display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:30px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.group-tabs button{padding:0;border:0;background:none;color:var(--muted);cursor:pointer}
+.group-tabs button[aria-selected="true"],.group-tabs button:hover{color:var(--text);font-weight:700}
+.page{display:none}.page.active{display:block}
+h2{margin:0 0 14px;font-size:1rem;color:var(--muted)}
+.framework-search{display:grid;gap:8px}
+.framework-search label{font-weight:700;color:var(--muted)}
+.framework-search input{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:0;background:var(--surface);color:var(--text);outline:none}
+.framework-search input:focus{border-color:var(--accent)}
+.result-list,.item-list{display:grid;gap:10px}
+.search-result,.framework-item{padding:15px 16px;border:1px solid var(--line);background:var(--surface)}
+.search-result{display:grid;gap:4px;width:100%;color:var(--text);text-align:left;cursor:pointer}
+.search-result:hover,.search-result:focus-visible,.framework-item.search-target{border-color:var(--accent)}
+.item-title,.search-title{font-weight:700}
+.item-desc,.item-path{margin-top:5px;font-size:.92rem;line-height:1.6}
+.item-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
+.item-links a{color:var(--accent);text-decoration:none}.item-links a:hover{text-decoration:underline}
+.empty{padding:12px 0;line-height:1.7}
+.site-foot{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+@media(max-width:600px){.page-shell{width:min(calc(100% - 24px),var(--content));padding-top:40px}h1{font-size:1.7rem}.group-tabs{gap:8px 14px}}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>慢 慢 | Framework</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-head">
+      <h1>慢 慢 | Framework</h1>
+      <p>stillness by slowly 的 Framework 主頁</p>
+    </header>
+
+    <nav id="groupTabs" class="group-tabs" aria-label="Framework 分類">
+      <button type="button" data-page="directory" aria-selected="true">慢慢看</button>
+    </nav>
+
+    <section class="page active" data-page-panel="directory">
+      <h2>慢慢看</h2>
+      <div class="framework-search">
+        <label for="frameworkSearch">搜尋 Framework</label>
+        <input
+          id="frameworkSearch"
+          type="search"
+          placeholder="輸入名稱、描述、關鍵字或路徑…"
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <p id="searchStatus" class="status" aria-live="polite"></p>
+        <div id="searchResults" class="result-list"></div>
+      </div>
+    </section>
+
+    <div id="groupPanels"></div>
+
+    <footer class="site-foot">慢 慢 | stillness by slowly</footer>
+  </main>
+
+  <script src="./index_data.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
